@@ -125,7 +125,7 @@ const LEIS = [
       { nome: "Anexo XI — Índices Urbanísticos", link: "https://drive.google.com/file/d/18Gt6WTnewQSs_lIxliWpSsuEXGWqcFBz/view?usp=sharing" },
       { nome: "Anexo XII — Tabela de Uso do Solo", link: "https://drive.google.com/file/d/1c4CiFYXXedaFGPg8TN13DUIpVOSd78MT/view?usp=sharing" },
       { nome: "Anexo XIII — Tabela de Vagas de Estacionamento", link: "https://drive.google.com/file/d/192KDIcmzyMDrYrHKh4h9OUlAu-wP_NE6/view?usp=sharing" },
-      { nome: "Anexo XIV — Glossário", link: null },
+      { nome: "Anexo XIV — Glossário", link: "https://drive.google.com/file/d/1mqbx5fw4GnUPqEgONL-hAbY0XSEOWR1u/view?usp=sharing" },
     ],
     temas: [
       "Zona Residencial (ZR)",
