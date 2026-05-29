@@ -4,7 +4,8 @@ import { useState } from "react";
 // CONFIGURAÇÃO — substitua pela URL gerada no Google Apps Script
 // Veja o arquivo INSTRUCOES.md para o passo a passo completo
 // ─────────────────────────────────────────────────────────────────────────────
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxKTBszB3_5oWaVH0pBelx3jG-svQoMxSnEvdc0K6HHb7FYq6wR2FcXWixVjArQtiJ/exec";
+// Proxy serverless no próprio Vercel — evita bloqueio de CORS do Google
+const PROXY_URL = "/api/enviar";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PALETA — Identidade Visual Arabutã / Plano Diretor
@@ -46,16 +47,13 @@ async function enviarParaGoogleSheets(identificacao, contribuicoes) {
     justificativa: c.justificativa || "",
   }));
 
-  // Google Apps Script exige mode: "no-cors" para evitar bloqueio CORS.
-  // Com no-cors a resposta é opaca (não legível), por isso apenas verificamos
-  // que a requisição foi disparada sem erro de rede.
-  await fetch(APPS_SCRIPT_URL, {
+  const response = await fetch(PROXY_URL, {
     method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "text/plain" },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ linhas }),
   });
 
+  if (!response.ok) throw new Error("Falha no envio");
   return protocolo;
 }
 
