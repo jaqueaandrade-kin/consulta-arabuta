@@ -4,7 +4,7 @@ import { useState } from "react";
 // CONFIGURAÇÃO — substitua pela URL gerada no Google Apps Script
 // Veja o arquivo INSTRUCOES.md para o passo a passo completo
 // ─────────────────────────────────────────────────────────────────────────────
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/SEU_ID_AQUI/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/https://docs.google.com/spreadsheets/d/1u3uqrHX6OvELD3zVRw1kOXy8ZmqULml8uCbJhJiKihw/edit?gid=0#gid=0/exec";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PALETA — Identidade Visual Arabutã / Plano Diretor
