@@ -46,13 +46,16 @@ async function enviarParaGoogleSheets(identificacao, contribuicoes) {
     justificativa: c.justificativa || "",
   }));
 
-  const response = await fetch(APPS_SCRIPT_URL, {
+  // Google Apps Script exige mode: "no-cors" para evitar bloqueio CORS.
+  // Com no-cors a resposta é opaca (não legível), por isso apenas verificamos
+  // que a requisição foi disparada sem erro de rede.
+  await fetch(APPS_SCRIPT_URL, {
     method: "POST",
+    mode: "no-cors",
     headers: { "Content-Type": "text/plain" },
     body: JSON.stringify({ linhas }),
   });
 
-  if (!response.ok) throw new Error("Falha no envio");
   return protocolo;
 }
 
