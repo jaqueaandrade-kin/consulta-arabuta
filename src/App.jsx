@@ -315,12 +315,27 @@ export default function ConsultaPublica() {
           alignItems: "center",
           gap: 20,
         }}>
-          {/* Logo oficial Plano Diretor Arabutã */}
-          <img
-            src="/logo-pd.png"
-            alt="Plano Diretor Arabutã"
-            style={{ height: 56, flexShrink: 0, objectFit: "contain" }}
-          />
+          {/* Logotipo textual */}
+          <div style={{ flexShrink: 0 }}>
+            <div style={{
+              background: C.amarelo,
+              width: 48, height: 48,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontWeight: "900", fontSize: 22, color: C.preto,
+              letterSpacing: "-1px",
+            }}>PD</div>
+          </div>
+          <div>
+            <div style={{ color: C.amarelo, fontWeight: "900", fontSize: 18, lineHeight: 1, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+              Plano Diretor
+            </div>
+            <div style={{ color: C.amarelo, fontWeight: "900", fontSize: 22, lineHeight: 1.1, textTransform: "uppercase", letterSpacing: "0.08em" }}>
+              Arabutã
+            </div>
+            <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 11, marginTop: 3, letterSpacing: "0.06em" }}>
+              MUNICIPIO DE ARABUTÃ · SANTA CATARINA
+            </div>
+          </div>
           <div style={{ marginLeft: "auto", textAlign: "right" }}>
             <div style={{
               background: C.vermelho,
