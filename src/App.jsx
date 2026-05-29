@@ -68,6 +68,7 @@ const LEIS = [
     cor: C.vermelho,
     corEsc: C.vermelhoEsc,
     corClara: "#FDECEA",
+    link: "https://arabuta.nossoplanodiretor.com.br/documentos",
     temas: [
       "Princípios e objetivos do Plano Diretor",
       "Perímetro urbano e delimitação territorial",
@@ -99,6 +100,7 @@ const LEIS = [
     cor: C.laranja,
     corEsc: "#C04D0A",
     corClara: C.laranjaClaro,
+    link: "https://arabuta.nossoplanodiretor.com.br/documentos",
     temas: [
       "Zona Residencial (ZR)",
       "Zona de Comércio e Serviços (ZCS)",
@@ -130,6 +132,7 @@ const LEIS = [
     cor: C.amarelo,
     corEsc: "#C98F00",
     corClara: C.amareloClaro,
+    link: "https://arabuta.nossoplanodiretor.com.br/documentos",
     temas: [
       "Condições gerais para parcelamento e remembramento",
       "Dimensões mínimas e máximas de lotes",
@@ -403,10 +406,23 @@ export default function ConsultaPublica() {
                       fontWeight: "900", fontSize: 13, color: l.id === "parcelamento" ? C.preto : C.branco,
                       letterSpacing: "0.02em",
                     }}>{l.sigla}</div>
-                    <div>
+                    <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: "bold", fontSize: 15, color: C.preto, marginBottom: 3 }}>{l.nome}</div>
                       <div style={{ color: C.cinzaMed, fontSize: 13, lineHeight: 1.5 }}>{l.descricao}</div>
                     </div>
+                    <a href={l.link} target="_blank" rel="noreferrer" style={{
+                      flexShrink: 0,
+                      background: C.branco,
+                      border: `1.5px solid ${l.cor}`,
+                      color: l.cor,
+                      padding: "8px 14px",
+                      fontSize: 12,
+                      fontWeight: "bold",
+                      textDecoration: "none",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
+                      whiteSpace: "nowrap",
+                    }}>Ver minuta</a>
                   </div>
                 ))}
               </div>
@@ -579,7 +595,21 @@ export default function ConsultaPublica() {
                     }}>{l.sigla}</div>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: "bold", fontSize: 15, color: sel ? l.corEsc : C.preto, marginBottom: 3 }}>{l.nome}</div>
-                      <div style={{ color: C.cinzaMed, fontSize: 13, lineHeight: 1.5 }}>{l.descricao}</div>
+                      <div style={{ color: C.cinzaMed, fontSize: 13, lineHeight: 1.5, marginBottom: 8 }}>{l.descricao}</div>
+                      <a href={l.link} target="_blank" rel="noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                          display: "inline-block",
+                          border: `1.5px solid ${l.cor}`,
+                          color: l.cor,
+                          background: C.branco,
+                          padding: "5px 12px",
+                          fontSize: 11,
+                          fontWeight: "bold",
+                          textDecoration: "none",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.06em",
+                        }}>Consultar minuta</a>
                     </div>
                     <div style={{
                       width: 22, height: 22, flexShrink: 0,
