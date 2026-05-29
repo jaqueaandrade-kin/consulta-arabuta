@@ -349,7 +349,7 @@ export default function ConsultaPublica() {
               Consulta Pública
             </div>
             <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 11, marginTop: 4 }}>
-              29 mai a 29 jun · 2026
+              01 jun a 01 jul · 2026
             </div>
           </div>
         </div>
