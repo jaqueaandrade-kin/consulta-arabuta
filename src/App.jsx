@@ -69,7 +69,16 @@ const LEIS = [
     cor: C.vermelho,
     corEsc: C.vermelhoEsc,
     corClara: "#FDECEA",
-    link: "https://arabuta.nossoplanodiretor.com.br/documentos",
+    link: "https://drive.google.com/open?id=1L0IePQ-XNHJHSghLbYO49w-x3MCbRwan&usp=drive_copy",
+    anexos: [
+      { nome: "Anexo I — Mapa Macrozoneamento Municipal", link: "https://drive.google.com/file/d/1_9NEVf6bw6XYYevz8q3Tt8y1UHDkRFJN/view?usp=sharing" },
+      { nome: "Anexo II — Mapa Perímetro Urbano Municipal", link: "https://drive.google.com/file/d/1pAlJDWVmN9O3yLvy5H5nojM2vatqbbzC/view?usp=sharing" },
+      { nome: "Anexo III — Mapa Perímetro Urbano Sede", link: "https://drive.google.com/file/d/1x8_nJYhDRnhabV3BwtK7QWUQT77drDXT/view?usp=sharing" },
+      { nome: "Anexo IV — Mapa Perímetro Urbano Nova Estrela", link: "https://drive.google.com/file/d/1Yn3BC91C-2KYllqifxqxJ5Rnr3qlz1eK/view?usp=sharing" },
+      { nome: "Anexo V — Mapa Perímetro Urbano Canhada Grande", link: "https://drive.google.com/file/d/1yy2QAybuJGKpvIUHwQYS6s41vEVUzsJe/view?usp=sharing" },
+      { nome: "Anexo VI — Memorial Descritivo do Perímetro Urbano Municipal", link: null },
+      { nome: "Anexo VII — Plano de Ação e Investimento", link: "https://drive.google.com/file/d/1_H44x-wuBRwMLQoZnDZjYpNXjLUQKCKM/view?usp=sharing" },
+    ],
     temas: [
       "Princípios e objetivos do Plano Diretor",
       "Perímetro urbano e delimitação territorial",
@@ -101,7 +110,23 @@ const LEIS = [
     cor: C.laranja,
     corEsc: "#C04D0A",
     corClara: C.laranjaClaro,
-    link: "https://arabuta.nossoplanodiretor.com.br/documentos",
+    link: "https://drive.google.com/file/d/1Pv17Y0_kve91wM4yBSKzFSBNw3H4euDy/view?usp=sharing",
+    anexos: [
+      { nome: "Anexo I — Mapa de Macrozoneamento Municipal", link: "https://drive.google.com/file/d/1h_z0pHTlvwQuY7l_gsOgj2WAuSf8f7BI/view?usp=sharing" },
+      { nome: "Anexo II — Mapas de Zoneamento de Uso e Ocupação do Solo", link: "https://drive.google.com/file/d/1VmZMHlvUfKJnGGgXiZZevfM4STEg1DMR/view?usp=sharing" },
+      { nome: "Anexo III — Mapa de Zoneamento Urbano — Sede Municipal", link: "https://drive.google.com/file/d/16bT4HPBmIs58L5ju72wocCFwlnQ7ijKK/view?usp=sharing" },
+      { nome: "Anexo IV — Mapa de Zoneamento Urbano — Nova Estrela", link: "https://drive.google.com/file/d/1XHDtZFAs8kG97m4pf3PA_lEnb6qh5LDx/view?usp=sharing" },
+      { nome: "Anexo V — Mapa de Zoneamento Urbano — Canhada Grande", link: "https://drive.google.com/file/d/1QquJvl_L_Flo2tGMKHSZ1fc52P0OeBo9/view?usp=sharing" },
+      { nome: "Anexo VI — Mapas do Sistema Viário Municipal", link: null },
+      { nome: "Anexo VII — Mapa do Sistema Viário Municipal — Sede", link: null },
+      { nome: "Anexo VIII — Mapa do Sistema Viário Municipal — Nova Estrela", link: null },
+      { nome: "Anexo IX — Mapa do Sistema Viário Municipal — Canhada Grande", link: null },
+      { nome: "Anexo X — Sistema Viário — Seções Transversais", link: null },
+      { nome: "Anexo XI — Índices Urbanísticos", link: "https://drive.google.com/file/d/18Gt6WTnewQSs_lIxliWpSsuEXGWqcFBz/view?usp=sharing" },
+      { nome: "Anexo XII — Tabela de Uso do Solo", link: "https://drive.google.com/file/d/1c4CiFYXXedaFGPg8TN13DUIpVOSd78MT/view?usp=sharing" },
+      { nome: "Anexo XIII — Tabela de Vagas de Estacionamento", link: "https://drive.google.com/file/d/192KDIcmzyMDrYrHKh4h9OUlAu-wP_NE6/view?usp=sharing" },
+      { nome: "Anexo XIV — Glossário", link: null },
+    ],
     temas: [
       "Zona Residencial (ZR)",
       "Zona de Comércio e Serviços (ZCS)",
@@ -133,7 +158,8 @@ const LEIS = [
     cor: C.amarelo,
     corEsc: "#C98F00",
     corClara: C.amareloClaro,
-    link: "https://arabuta.nossoplanodiretor.com.br/documentos",
+    link: "https://drive.google.com/file/d/1mb57O3V1R42Ao7EGnr3yJxPQqeSuLACe/view",
+    anexos: [],
     temas: [
       "Condições gerais para parcelamento e remembramento",
       "Dimensões mínimas e máximas de lotes",
@@ -411,19 +437,34 @@ export default function ConsultaPublica() {
                       <div style={{ fontWeight: "bold", fontSize: 15, color: C.preto, marginBottom: 3 }}>{l.nome}</div>
                       <div style={{ color: C.cinzaMed, fontSize: 13, lineHeight: 1.5 }}>{l.descricao}</div>
                     </div>
-                    <a href={l.link} target="_blank" rel="noreferrer" style={{
-                      flexShrink: 0,
-                      background: C.branco,
-                      border: `1.5px solid ${l.cor}`,
-                      color: l.cor,
-                      padding: "8px 14px",
-                      fontSize: 12,
-                      fontWeight: "bold",
-                      textDecoration: "none",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.06em",
-                      whiteSpace: "nowrap",
-                    }}>Ver minuta</a>
+                    <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
+                      <a href={l.link} target="_blank" rel="noreferrer" style={{
+                        background: C.branco,
+                        border: `1.5px solid ${l.cor}`,
+                        color: l.cor,
+                        padding: "8px 14px",
+                        fontSize: 12,
+                        fontWeight: "bold",
+                        textDecoration: "none",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.06em",
+                        whiteSpace: "nowrap",
+                      }}>Ver minuta</a>
+                      {l.anexos && l.anexos.length > 0 && (
+                        <div style={{ textAlign: "right" }}>
+                          {l.anexos.filter(a => a.link).map((a, i) => (
+                            <a key={i} href={a.link} target="_blank" rel="noreferrer" style={{
+                              display: "block",
+                              fontSize: 11,
+                              color: l.cor,
+                              textDecoration: "underline",
+                              marginTop: 3,
+                              whiteSpace: "nowrap",
+                            }}>{a.nome}</a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -611,6 +652,24 @@ export default function ConsultaPublica() {
                           textTransform: "uppercase",
                           letterSpacing: "0.06em",
                         }}>Consultar minuta</a>
+                        {l.anexos && l.anexos.length > 0 && (
+                          <div style={{ marginTop: 8 }} onClick={(e) => e.stopPropagation()}>
+                            <div style={{ fontSize: 11, color: C.cinzaMed, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4, fontWeight: "bold" }}>Anexos disponíveis:</div>
+                            {l.anexos.map((a, i) => (
+                              a.link ? (
+                                <a key={i} href={a.link} target="_blank" rel="noreferrer"
+                                  onClick={(e) => e.stopPropagation()}
+                                  style={{ display: "block", fontSize: 12, color: l.cor, textDecoration: "underline", marginTop: 3, lineHeight: 1.4 }}>
+                                  {a.nome}
+                                </a>
+                              ) : (
+                                <div key={i} style={{ display: "block", fontSize: 12, color: C.cinzaMed, marginTop: 3, lineHeight: 1.4 }}>
+                                  {a.nome} <span style={{ fontSize: 10, color: "#bbb" }}>(em breve)</span>
+                                </div>
+                              )
+                            ))}
+                          </div>
+                        )}
                     </div>
                     <div style={{
                       width: 22, height: 22, flexShrink: 0,
