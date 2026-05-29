@@ -315,27 +315,12 @@ export default function ConsultaPublica() {
           alignItems: "center",
           gap: 20,
         }}>
-          {/* Logotipo textual — substitua por <img> se tiver o arquivo SVG/PNG */}
-          <div style={{ flexShrink: 0 }}>
-            <div style={{
-              background: C.amarelo,
-              width: 48, height: 48,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontWeight: "900", fontSize: 22, color: C.preto,
-              letterSpacing: "-1px",
-            }}>PD</div>
-          </div>
-          <div>
-            <div style={{ color: C.amarelo, fontWeight: "900", fontSize: 18, lineHeight: 1, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-              Plano Diretor
-            </div>
-            <div style={{ color: C.amarelo, fontWeight: "900", fontSize: 22, lineHeight: 1.1, textTransform: "uppercase", letterSpacing: "0.08em" }}>
-              Arabutã
-            </div>
-            <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 11, marginTop: 3, letterSpacing: "0.06em" }}>
-              MUNICIPIO DE ARABUTÃ · SANTA CATARINA
-            </div>
-          </div>
+          {/* Logo oficial Plano Diretor Arabutã */}
+          <img
+            src="/PD-ARABUTÃ%233.png"
+            alt="Plano Diretor Arabutã"
+            style={{ height: 56, flexShrink: 0, objectFit: "contain" }}
+          />
           <div style={{ marginLeft: "auto", textAlign: "right" }}>
             <div style={{
               background: C.vermelho,
@@ -349,7 +334,7 @@ export default function ConsultaPublica() {
               Consulta Pública
             </div>
             <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 11, marginTop: 4 }}>
-              01 jun a 01 jul · 2026
+              29 mai a 29 jun · 2026
             </div>
           </div>
         </div>
