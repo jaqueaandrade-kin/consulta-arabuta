@@ -317,7 +317,7 @@ export default function ConsultaPublica() {
         }}>
           {/* Logo oficial Plano Diretor Arabutã */}
           <img
-            src="/PD-ARABUTÃ%233.png"
+            src="/logo-pd.png"
             alt="Plano Diretor Arabutã"
             style={{ height: 56, flexShrink: 0, objectFit: "contain" }}
           />
